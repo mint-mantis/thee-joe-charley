@@ -1,17 +1,17 @@
 ---
 // Import necessary components
-import SocialIcons from '../SocialIcons.astro';
-import Title from '../atoms/Title.astro';
+import SocialIcons from '../components/SocialIcons.astro';
+import Title from '../components/atoms/Title.astro';
 ---
 
 <!-- Trigger button to open modal -->
-<button id="openModalBtn" class="open-modal-btn">Events</button>
+<button id="openModalBtn5" class="open-modal-btn">Contact</button>
 
 <!-- Modal structure -->
-<div id="aboutModal" class="modal z-50">
+<div id="contactModal" class="modal z-50">
 	<div class="modal-content">
 		<!-- Close button for the modal -->
-		<span id="closeModalBtn" class="close">&times;</span>
+		<span id="closeModalBtn5" class="close">&times;</span>
 
 		<!-- Your about section -->
     <slot />
@@ -34,19 +34,19 @@ import Title from '../atoms/Title.astro';
 </div>
 <script is:inline>
 	// Get modal element
-	const modal = document.getElementById('aboutModal');
+	const modal = document.getElementById('contactModal');
 	// Get open modal button
-	const openModalBtn = document.getElementById('openModalBtn');
+	const openModalBtn5 = document.getElementById('openModalBtn5');
 	// Get close button
-	const closeModalBtn = document.getElementById('closeModalBtn');
+	const closeModalBtn5 = document.getElementById('closeModalBtn5');
 
 	// Event listener to open modal
-	openModalBtn.addEventListener('click', function () {
+	openModalBtn5.addEventListener('click', function () {
 		modal.style.display = 'block';
 	});
 
 	// Event listener to close modal
-	closeModalBtn.addEventListener('click', function () {
+	closeModalBtn5.addEventListener('click', function () {
 		modal.style.display = 'none';
 	});
 
@@ -155,15 +155,5 @@ import Title from '../atoms/Title.astro';
 	cursor: pointer;
 }
 
-/* Optional: Style the open modal button */
-.open-modal-btn {
-	padding: 10px 20px;
-	font-size: 16px;
-	cursor: pointer;
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-}
 
 </style>

@@ -106,3 +106,14 @@ p{
 .max__width {
 	max-width: 117.8rem;
 }
+
+/* Optional: Style the open modal button */
+.open-modal-btn {
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: #ffffff04;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+}

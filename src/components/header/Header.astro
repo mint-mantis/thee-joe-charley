@@ -2,6 +2,11 @@
 import './header.css';
 const { origin } = Astro.props;
 import Logo from '../Logo.astro';
+import ListenModalLayout from '../../layouts/ListenModalLayout.astro';
+import EventsModalLayout from '../../layouts/EventsModalLayout.astro';
+import VideoModalLayout from '../../layouts/VideoModalLayout.astro';
+import GalleryModalLayout from '../../layouts/GalleryModalLayout.astro';
+import ContactModalLayout from '../../layouts/ContactModalLayout.astro';
 ---
 
 <header class="header">
@@ -9,25 +14,13 @@ import Logo from '../Logo.astro';
 		<Logo title="Thee" name="Joe Charley"/>
 		<nav class="links"   tabindex="0.1">
 			<button class="menu__btn" >Menú</button>
-			<ul class="header__list">
-				{
-					origin.map((data) => (
-						<li>
-							<a class="menu__link" href={data.link}>
-								<span class="icon__container" >
-									<iconify-icon
-										class="icons"
-										icon={data.icon}
-										width="20"
-										height="20"
-									/>
-									{data.content}
-								</span>
-							</a>
-						</li>
-					))
-				}
-			</ul>
+			<div class="header__list">
+				<ListenModalLayout/>
+				<EventsModalLayout/>
+				<VideoModalLayout/>
+				<GalleryModalLayout/>
+				<ContactModalLayout/>
+			</div>
 		</nav>
 	</div>
 </header>
