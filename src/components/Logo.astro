@@ -1,0 +1,23 @@
+---
+const { title, name } = Astro.props;
+---
+
+<a href="/" class="profile">
+	<h3 class="white header__title">
+		<span>
+			{title}
+		</span>
+	<div class="name">
+        {name}
+    </div>
+	</h3>
+</a>
+
+<style>
+	.profile {
+		display: flex;
+		border-radius: 50%;
+		align-items: center;
+		gap: 1.5rem;
+	}
+</style>
