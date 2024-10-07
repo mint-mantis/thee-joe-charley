@@ -91,13 +91,13 @@
 		flex-wrap: wrap;
 		margin-right: 0;
 		z-index: 2;
-		background: #1c0544;
+		background: black;
 		justify-content: center;
 		align-items: center;
 		border-radius: 14px;
 		width: 100%;
 		padding: 0.8rem 1rem;
-		border: 1px solid #dc5898;
+		border: 1px solid var(--secondary-10);
 		align-self: center;
 		opacity: 0;
 		pointer-events: none;
