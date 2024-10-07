@@ -31,7 +31,7 @@
 	cursor: pointer;
 	text-transform: uppercase;
 }
-.header .profile .header__title span {
+ .title {
 	color: var(--secondary-0);
 }
 .header .profile .header__title .name {

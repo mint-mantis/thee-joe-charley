@@ -4,12 +4,12 @@ const { title, name } = Astro.props;
 
 <a href="/" class="profile">
 	<h3 class="white header__title">
-		<span>
+		<span class="title">
 			{title}
 		</span>
-	<div class="name">
-        {name}
-    </div>
+		<span class="name">
+			{name}
+		</span>
 	</h3>
 </a>
 
@@ -19,5 +19,16 @@ const { title, name } = Astro.props;
 		border-radius: 50%;
 		align-items: center;
 		gap: 1.5rem;
+	}
+	.header__title {
+		display: flex;
+		flex-direction: column;
+	}
+	.title,
+	.name {
+		display: block; 
+		margin: 0; 
+		padding: 0;
+		line-height: 1;
 	}
 </style>
