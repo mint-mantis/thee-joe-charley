@@ -82,8 +82,9 @@ html {
 }
 body {
 	width: 100%;
-	background: var(--site-bg) no-repeat;
-	background: var(--site-bg) no-repeat;
+	background: url('/img/joe-charley_web-1.webp') no-repeat top center;
+	background-position: top 20%;
+	background-size: cover;
 }
 main {
 	align-self: center;
