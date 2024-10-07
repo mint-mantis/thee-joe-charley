@@ -1,0 +1,37 @@
+---
+const { buttonText, buttonLink } = Astro.props;
+---
+
+<a href={buttonLink} class="custom-button">
+   {buttonText}
+</a>
+
+<style>
+    .custom-button {
+        color: var(--secondary-10); /* Custom color variable */
+        border: 1px solid var(--secondary-10); /* Slightly thicker border for emphasis */
+        font-weight: 600; /* Medium font weight */
+        border-radius: 5px; /* Increased border-radius for more rounded corners */
+        font-size: 1.25rem; /* Text size */
+        padding: 1rem 3.5rem; /* Slightly smaller padding to balance the new roundness */
+        text-align: center; /* Center text */
+        margin-right: 0.5rem; /* Right margin */
+        margin-bottom: 0.5rem; /* Bottom margin */
+        text-transform: uppercase; /* Uppercase text */
+        outline: none; /* Remove default outline */
+        background-color: transparent; /* Transparent background initially */
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+    }
+
+    .custom-button:hover {
+        color: white; /* Text turns white on hover */
+        background-color: var(--secondary-10); /* Background turns to the secondary color */
+        border-color: var(--secondary-10); /* Match border color to the hover background */
+    }
+
+    .custom-button:focus {
+        outline: none; /* Remove outline */
+        box-shadow: 0 0 0 4px rgba(252, 211, 77, 0.3); /* Subtle focus ring */
+    }
+</style>
+

@@ -18,7 +18,7 @@
 	--primary-99: #f4f4fe;
 	--primary-100: #ffffff;
 	--secondary-0: #FFE600;
-	--secondary-10: #490e25;
+	--secondary-10: #FFD700;
 	--secondary-20: #782344;
 	--secondary-30: #87224a;
 	--secondary-40: #ae285f;
@@ -101,6 +101,9 @@ p{
 }
 .white{
 	color: var(--primary-100);
+}
+.yellow-10{
+	color: var(--secondary-10);
 }
 
 .max__width {

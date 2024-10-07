@@ -18,15 +18,22 @@ import Title from '../components/atoms/Title.astro';
 		<section id="about" class="about">
 			<div class="about__container">
 				<div class="about__content">
-					<Title margin="1rem" contenido="Sobre mí" />
+					<Title margin="1rem" contenido="Contact" />
 					<p class="about__text">
-						Habla sobre tí, tu profesión, lo que te gusta, cual es
-						tu pasatiempos, que haces en tu ratos libres, que cosas
-						te apasionan y has aprendido, ¿porqué elegiste está
-						profesión?, ¿Tienes mascota? ¿Te gusta ir a caminar al
-						parque? ¿Estudiaste algo más? ¿En que eres bueno?
+						Representation: Mint Mantis <br>
+						Rep Name - Ari Saeidi-Pour
 					</p>
-					<SocialIcons width="25" height="25" />
+					<div class="flex flex-wrap flex-col">
+						<a class="about__text font-semibold" href="https://mintmantis.com/" target="_blank">
+							www.mintmantis.com
+						</a>
+						<a class="about__text font-semibold" href="tel:(416) 828-6499">
+							(416) 828-6499
+						</a>
+						<a class="about__text font-semibold" href="mailto:ari@mintmantis.com">
+							ari@mintmantis.com
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -62,8 +69,8 @@ import Title from '../components/atoms/Title.astro';
 <style>
   .about {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content:flex-start;
+	align-items: flex-start;
 	gap: 1rem;
 	width: 100%;
 }

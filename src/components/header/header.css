@@ -56,18 +56,6 @@
 	position: relative;
 }
 
-.header .links a::after {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	content: '';
-	width: 100%;
-	transform: scaleX(0);
-	transform-origin: 0;
-	height: 2px;
-	background: var(--primary);
-	transition: 0.35s transform;
-}
 
 .header .links a:hover {
 	color: var(--primary-90);

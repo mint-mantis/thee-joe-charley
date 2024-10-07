@@ -1,5 +1,5 @@
 ---
-// Import necessary components
+import Button from '../components/UI/button-outline.astro';
 import SocialIcons from '../components/SocialIcons.astro';
 import Title from '../components/atoms/Title.astro';
 ---
@@ -14,19 +14,39 @@ import Title from '../components/atoms/Title.astro';
 		<span id="closeModalBtn2" class="close">&times;</span>
 
 		<!-- Your about section -->
-    <slot />
+		<slot />
 		<section id="about" class="about">
 			<div class="about__container">
 				<div class="about__content">
-					<Title margin="1rem" contenido="Sobre mí" />
-					<p class="about__text">
-						Habla sobre tí, tu profesión, lo que te gusta, cual es
-						tu pasatiempos, que haces en tu ratos libres, que cosas
-						te apasionan y has aprendido, ¿porqué elegiste está
-						profesión?, ¿Tienes mascota? ¿Te gusta ir a caminar al
-						parque? ¿Estudiaste algo más? ¿En que eres bueno?
-					</p>
-					<SocialIcons width="25" height="25" />
+					<div class="text-center">
+						<Title margin="1rem" contenido="Events Lists" />
+					</div>
+					<div class="event">
+						<h3 class="font-bold text-4xl underline mb-4">Soulful Serenade at The Minneapolis Theater</h3>
+						<ul>
+							<li>Date: October 5, 2023</li>
+							<li>Time: 7:00 PM</li>
+							<li>Venue: The Minneapolis Theater</li>
+						</ul>
+						<div class="mt-8">
+							<Button buttonText="Buy" buttonLink=""/>
+						</div>
+					</div>
+					<hr>
+					<div class="event">
+						<h3 class="font-bold text-4xl underline mb-4">
+							Acoustic Night at The Jazz Lounge
+						</h3>
+						<ul>
+							<li>Date: November 12, 2023</li>
+							<li>Time: 8:30 PM</li>
+							<li>Venue: The Jazz Lounge</li>
+						</ul>
+						<div class="mt-8">
+							<Button buttonText="Buy" buttonLink=""/>
+						</div>
+					</div>
+					<!-- <SocialIcons width="25" height="25" /> -->
 				</div>
 			</div>
 		</section>
@@ -58,103 +78,103 @@ import Title from '../components/atoms/Title.astro';
 	});
 </script>
 
-
 <style>
-  .about {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-	width: 100%;
-}
-
-.about__container {
-	display: flex;
-	padding: 11rem 13.1rem;
-	/* flex-wrap: wrap; */
-	justify-content: space-around;
-	gap: 4.4rem;
-}
-
-.about__img {
-	background-color: #0d0045;
-	-webkit-mask-image: radial-gradient(ellipse, #000 53%, #0000 68%);
-	border-radius: 50%;
-	mask-image: radial-gradient(ellipse, #000 53%, #0000 68%);
-	border-radius: 50%;
-	object-fit: cover;
-	width: 39.5rem;
-	height: 48.1rem;
-	min-width: 39.5rem;
-	min-height: 48.1rem;
-}
-
-.about__content {
-	display: flex;
-	flex-direction: column;
-	max-width: 75rem;
-	gap: 2.1rem;
-	justify-content: center;
-}
-
-.about__text {
-	font-size: 2.1rem;
-	max-width: 70.19rem;
-}
-
-@media screen and (max-width: 768px) {
-	.about__container {
-		padding: 8rem 3.1rem;
-		flex-direction: column-reverse;
+	.about {
+		display: flex;
+		justify-content: center;
 		align-items: center;
+		gap: 1rem;
+		width: 100%;
 	}
+
+	.about__container {
+		display: flex;
+		padding: 11rem 13.1rem;
+		/* flex-wrap: wrap; */
+		justify-content: space-around;
+		gap: 4.4rem;
+	}
+
 	.about__img {
-		width: 29.5rem;
-		height: 38.1rem;
-		min-width: 29.5rem;
-		min-height: 38.1rem;
+		background-color: #0d0045;
+		-webkit-mask-image: radial-gradient(ellipse, #000 53%, #0000 68%);
+		border-radius: 50%;
+		mask-image: radial-gradient(ellipse, #000 53%, #0000 68%);
+		border-radius: 50%;
+		object-fit: cover;
+		width: 39.5rem;
+		height: 48.1rem;
+		min-width: 39.5rem;
+		min-height: 48.1rem;
 	}
-}
 
+	.about__content {
+		display: flex;
+		flex-direction: column;
+		max-width: 75rem;
+		gap: 2.1rem;
+		justify-content: center;
+	}
 
-/* Modal container */
-.modal {
-	display: none; /* Hidden by default */
-	position: fixed;
-	z-index: 50;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
-}
+	.about__text {
+		font-size: 2.1rem;
+		max-width: 70.19rem;
+	}
 
-/* Modal content */
-.modal-content {
-	background-color: rgba(0, 0, 0, 0.7);
-	margin: 10% auto; /* 10% from the top and centered */
-	padding: 20px;
-	border: 1px solid #88888819;
-	width: 100%; /* Could be adjusted for larger modals */
-	max-width: 1200px; /* Max width for the modal */
-}
+	@media screen and (max-width: 768px) {
+		.about__container {
+			padding: 8rem 3.1rem;
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+		.about__img {
+			width: 29.5rem;
+			height: 38.1rem;
+			min-width: 29.5rem;
+			min-height: 38.1rem;
+		}
+	}
 
-/* Close button */
-.close {
-	color: #aaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-}
+	/* Modal container */
+	.modal {
+		display: none; /* Hidden by default */
+		position: fixed;
+		z-index: 50;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(
+			0,
+			0,
+			0,
+			0.7
+		); /* Black background with transparency */
+	}
 
-.close:hover,
-.close:focus {
-	color: #000;
-	text-decoration: none;
-	cursor: pointer;
-}
+	/* Modal content */
+	.modal-content {
+		background-color: rgba(0, 0, 0, 0.7);
+		margin: 10% auto; /* 10% from the top and centered */
+		padding: 20px;
+		border: 1px solid #88888819;
+		width: 100%; /* Could be adjusted for larger modals */
+		max-width: 1200px; /* Max width for the modal */
+	}
 
+	/* Close button */
+	.close {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
 
-
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
 </style>
