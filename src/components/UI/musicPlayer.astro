@@ -91,7 +91,7 @@
 			bandName: 'Joe Charley',
 			duration: '3:34', // Format: "minutes:seconds"
 		},
-        {
+		{
 			src: 'https://res.cloudinary.com/dohidjhfn/video/upload/v1728286830/Good_Day_hfhfbc.mp3',
 			albumArt:
 				'https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg',
@@ -343,16 +343,6 @@
 		--blue: rgba(0, 146, 172, 1);
 	}
 
-	/* body {
-		font-family: 'Poppins', sans-serif;
-		font-size: 15px;
-		color: white;
-		background: #d9d9d9;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	} */
-
 	i {
 		width: 100%;
 		text-shadow: -4px -4px 6px var(--shadow-dark),
@@ -368,7 +358,7 @@
 		overflow: hidden;
 		box-sizing: border-box;
 		padding-bottom: 20px;
-        width: 300px;
+		width: 300px;
 		max-width: 400px;
 	}
 	#uiWrap {
@@ -415,6 +405,8 @@
 		background: var(--backgroundcolor);
 		box-shadow: 4px 4px 8px var(--shadow-dark),
 			-4px -4px 8px var(--shadow-light);
+		margin: 0;
+		padding: 0;
 	}
 
 	button:hover {
@@ -429,6 +421,9 @@
 	}
 
 	.audio-controls {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		text-align: center;
 	}
 
@@ -675,12 +670,16 @@
 		margin: 0 10px;
 		font-size: 0.9rem;
 	}
-
-    @media screen and (min-width: 768px) {
-        .app-container {
-        width: 400px;
-		max-width: 400px;
+	.playSkip {
+		display: flex;
+		gap: 2px; /* Adds some space between buttons */
+		justify-content: center; /* Centers buttons horizontally */
+		align-items: center;
 	}
-        
-    }
+	@media screen and (min-width: 768px) {
+		.app-container {
+			width: 400px;
+			max-width: 400px;
+		}
+	}
 </style>
