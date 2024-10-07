@@ -1,5 +1,6 @@
 ---
-// Import necessary components
+
+import MusicPlayer from '../components/UI/musicPlayer.astro';
 import SocialIcons from '../components/SocialIcons.astro';
 import Title from '../components/atoms/Title.astro';
 ---
@@ -18,15 +19,8 @@ import Title from '../components/atoms/Title.astro';
 		<section id="listen" class="about">
 			<div class="about__container">
 				<div class="about__content">
-					<Title margin="1rem" contenido="Sobre mí" />
-					<p class="about__text">
-						Habla sobre tí, tu profesión, lo que te gusta, cual es
-						tu pasatiempos, que haces en tu ratos libres, que cosas
-						te apasionan y has aprendido, ¿porqué elegiste está
-						profesión?, ¿Tienes mascota? ¿Te gusta ir a caminar al
-						parque? ¿Estudiaste algo más? ¿En que eres bueno?
-					</p>
-					<SocialIcons width="25" height="25" />
+					<Title margin="1rem" contenido="B.A.M.B.I" />
+					<MusicPlayer />
 				</div>
 			</div>
 		</section>
