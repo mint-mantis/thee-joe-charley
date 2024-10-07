@@ -1,24 +1,37 @@
 ---
 const {width, height} = Astro.props;
 const socialLinks = [
+{
+		title: 'Twitter',
+		icon: 'ri:twitter-x-fill',
+		href: 'https://x.com/TheeJoeCharley',
+
+	},
+{
+		title: 'Facebook',
+		icon: 'simple-icons:facebook',
+		href: 'https://www.facebook.com/theejoecharley/',
+
+	},
 	{
-		title: 'LinkedIn',
-		icon: 'simple-icons:linkedin',
-		href: 'https://www.linkedin.com/in/sofidev/',
+		title: 'Tiktok',
+		icon: 'simple-icons:tiktok',
+		href: 'https://www.tiktok.com/@theejoecharley',
+
+	},
+	{
+		title: 'Youtube',
+		icon: 'simple-icons:youtube',
+		href: '#',
 
 	},
 	{
 		title: 'Instagram',
 		icon: 'mdi:instagram',
-		href: 'https://www.instagram.com/',
+		href: 'https://www.instagram.com/theejoecharley',
 
 	},
-	{
-		title: 'Twitter',
-		icon: 'ri:twitter-x-fill',
-		href: 'https://twitter.com/home',
-
-	}
+	
 ];
 ---
 
@@ -44,6 +57,7 @@ const socialLinks = [
 <style>
 	.icons__container {
 		display: flex;
+		flex-direction: column;
     width: 29.6rem;
     /* padding: 1.3rem 4rem; */
     justify-content: flex-start;
@@ -60,7 +74,7 @@ const socialLinks = [
 	.Instagram:hover{
 	color: #E1306C;
 	}
-	.Tiwtter:hover{
+	.Twitter:hover{
 	color: #0aa5f6;
 	}
 	.CV:hover{
