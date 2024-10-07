@@ -77,7 +77,7 @@
 	.header .links {
 		position: fixed;
 		width: 100%;
-		top: calc(100vh - 20rem);
+		top: calc(100vh - 32rem);
 		justify-content: center;
 		align-items: center;
 		right: 0;
