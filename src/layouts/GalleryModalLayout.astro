@@ -1,6 +1,7 @@
 ---
 // Import necessary components
 import SocialIcons from '../components/SocialIcons.astro';
+import Gallery from '../components/UI/gallery.astro';
 import Title from '../components/atoms/Title.astro';
 ---
 
@@ -14,19 +15,12 @@ import Title from '../components/atoms/Title.astro';
 		<span id="closeModalBtn4" class="close">&times;</span>
 
 		<!-- Your about section -->
-    <slot />
+    <!-- <slot /> -->
 		<section id="about" class="about">
 			<div class="about__container">
 				<div class="about__content">
 					<Title margin="1rem" contenido="Sobre mí" />
-					<p class="about__text">
-						Habla sobre tí, tu profesión, lo que te gusta, cual es
-						tu pasatiempos, que haces en tu ratos libres, que cosas
-						te apasionan y has aprendido, ¿porqué elegiste está
-						profesión?, ¿Tienes mascota? ¿Te gusta ir a caminar al
-						parque? ¿Estudiaste algo más? ¿En que eres bueno?
-					</p>
-					<SocialIcons width="25" height="25" />
+					<Gallery />
 				</div>
 			</div>
 		</section>

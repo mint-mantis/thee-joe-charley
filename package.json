@@ -23,6 +23,9 @@
   "description": "![Portada](image-1.png)",
   "main": "index.astro",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss-csso": "^6.0.1",
+    "postcss-preset-env": "^10.0.6",
     "sass": "^1.79.4"
   },
   "repository": {
