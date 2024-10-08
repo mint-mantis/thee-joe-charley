@@ -1,258 +1,242 @@
-<div class="center">
-	<div class="carousel-wrapper">
-		<!-- abstract radio buttons for slides -->
-		<input id="slide1" type="radio" name="controls" checked="checked" />
-		<input id="slide2" type="radio" name="controls" />
-		<input id="slide3" type="radio" name="controls" />
-		<input id="slide4" type="radio" name="controls" />
-		<input id="slide5" type="radio" name="controls" />
+<div class="slider">
+	<div class="slider-inner">
+		<div class="slide" data-slide="1">
+			
+            <img src="https://ik.imagekit.io/boxhuwbys/joe-charley-11.webp?updatedAt=1728360284868" alt="" srcset="">
+		</div>
 
-		<!-- navigation dots -->
-		<label for="slide1" class="nav-dot"></label>
-		<label for="slide2" class="nav-dot"></label>
-		<label for="slide3" class="nav-dot"></label>
-		<label for="slide4" class="nav-dot"></label>
-		<label for="slide5" class="nav-dot"></label>
+		<div class="slide" data-slide="2">
+            <img src="https://ik.imagekit.io/boxhuwbys/joe-charley-12.webp?updatedAt=1728360284789" alt="" srcset="">
+		</div>
 
-		<!-- arrows -->
-		<label for="slide1" class="left-arrow"> </label>
-		<label for="slide2" class="left-arrow"> </label>
-		<label for="slide3" class="left-arrow"> </label>
-		<label for="slide4" class="left-arrow"> </label>
-		<label for="slide5" class="left-arrow"> </label>
+		<div class="slide" data-slide="3">
+            <img src="https://ik.imagekit.io/boxhuwbys/joe-charley-2.webp?updatedAt=1728360282240" alt="" srcset="">
+		</div>
 
-		<label for="slide1" class="right-arrow"> </label>
-		<label for="slide2" class="right-arrow"> </label>
-		<label for="slide3" class="right-arrow"> </label>
-		<label for="slide4" class="right-arrow"> </label>
-		<label for="slide5" class="right-arrow"> </label>
+		<div class="slide" data-slide="4">
+            <img src="https://ik.imagekit.io/boxhuwbys/joe-charley-9.webp?updatedAt=1728360281960" alt="" srcset="">
+		</div>
+        <div class="slide" data-slide="5">
+            <img src="https://ik.imagekit.io/boxhuwbys/joe-charley-10.webp?updatedAt=1728360281593" alt="" srcset="">
+		</div>
+        <div class="slide" data-slide="6">
+            <img src="https://ik.imagekit.io/boxhuwbys/joe-charley-5.webp?updatedAt=1728360281708" alt="" srcset="">
+		</div>
+        <div class="slide" data-slide="7">
+            <img src="https://ik.imagekit.io/boxhuwbys/joe-charley-7.webp?updatedAt=1728360281873" alt="" srcset="">
+		</div>
+        <div class="slide" data-slide="8">
+            <img src="https://ik.imagekit.io/boxhuwbys/joe-charley-8.webp?updatedAt=1728360282046" alt="" srcset="">
+		</div>
+	</div>
 
-		<div class="carousel">
-			<ul>
-				<li>
-					<img
-						src="https://ik.imagekit.io/boxhuwbys/joe-charley-10.webp"
-					/>
-				</li>
-				<li>
-					<img
-						src="https://ik.imagekit.io/boxhuwbys/joe-charley-9.webp"
-						alt=""
-					/>
-				</li>
-				<li>
-					<img
-						src="https://ik.imagekit.io/boxhuwbys/joe-charley-8.webp"
-					/>
-				</li>
-				<li>
-					<img
-						src="https://ik.imagekit.io/boxhuwbys/joe-charley-5.webp"
-					/>
-				</li>
-				<li>
-					<img
-						src="https://ik.imagekit.io/boxhuwbys/joe-charley-2.webp"
-						alt=""
-					/>
-				</li>
-			</ul>
+	<div class="indicators">
+		<div class="indicator" data-slide="1" active></div>
+		<div class="indicator" data-slide="2"></div>
+		<div class="indicator" data-slide="3"></div>
+		<div class="indicator" data-slide="4"></div>
+        <div class="indicator" data-slide="5" ></div>
+		<div class="indicator" data-slide="6"></div>
+		<div class="indicator" data-slide="7"></div>
+		<div class="indicator" data-slide="8"></div>
+	</div>
+
+	<div class="arrows">
+		<div class="arrow-prev">
+			<i class="fas fa-chevron-left"></i>
+		</div>
+		<div class="arrow-next">
+			<i class="fas fa-chevron-right"></i>
 		</div>
 	</div>
 </div>
-<style lang="scss" scoped>
+<style>
 
-$nb-slides: 5;
+	.content {
+		width: 100%;
+		height: 100vh;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+        margin: 0 auto;
+	}
 
-// THE BASICS
+	.slider {
+		position: relative;
+		width: 100%;
+		display: flex;
+		overflow: hidden;
+	}
 
+	.slider .slider-inner {
+		display: flex;
+		width: 100%;
+		transition: all 0.3s;
+	}
 
-.line {
-  width: 100%;
-}
+	.slider .slide {
+		flex: none;
+		width: 100%;
+	}
 
-.flex {
-  display: flex;
-}
+	.slider .indicators {
+		display: flex;
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		z-index: 1;
+	}
 
-.center {
-  @extend .flex;
-  align-items: center; // horizontal
-  justify-content: center; // vertical
-}
+	.slider .indicators .indicator {
+		margin: 0px 5px;
+		width: 10px;
+		height: 10px;
+		background-color: #ffffff;
+		border: 1px solid #ffffff;
+		border-radius: 4px;
+		opacity: 0.6;
+		cursor: pointer;
+		transition: all 0.3s;
+	}
 
+	.slider .indicators .indicator[active] {
+		width: 15px;
+		opacity: 1;
+	}
 
-.carousel-wrapper {
-  @extend .flex;
-  position: relative;
-  max-width: 600px;
-  margin: 50px;
+	.slider .arrows {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+	}
 
-  input {
-    display: none;
-  }
-}
+	.slider .arrows .arrow-prev,
+	.slider .arrows .arrow-next {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		background-color: #ffffff;
+		border: 1px solid #ffffff;
+		border-radius: 4px;
+		opacity: 0.6;
+		cursor: pointer;
+		transition: all 0.3s;
+	}
 
+	.slider .arrows .arrow-prev:hover,
+	.slider .arrows .arrow-next:hover {
+		opacity: 0.8;
+	}
 
-// CAROUSEL / SLIDER
-.carousel {
-  @extend .line;
-  overflow: hidden;
-  border-radius: 15px;
+	.slider .arrows .arrow-prev {
+		left: 50px;
+	}
 
-  ul {
-    @extend .center;
-    position: relative;
-    list-style: none;
-    overflow: hidden;
+	.slider .arrows .arrow-next {
+		right: 50px;
+	}
 
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100% * $nb-slides;
-
-    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
-  }
-
-  li {
-    @extend .line;
-
-    img {
-      @extend .line;
-      border-radius: 15px;
-    }
-  }
-}
-
-
-// NAVIGATION DOTS
-.nav-dot {
-  $dot-size: 15px;
-  position: absolute;
-  cursor: pointer;
-
-  margin-left: -$dot-size / 2;
-  bottom: -$dot-size * 1.5;
-  width: $dot-size;
-  height: $dot-size;
-
-  opacity: .5;
-  background-color: white;
-  border-radius: 50%;
-  transition: .4s;
-
-  &:hover {
-    opacity: .8;
-    transform: scale(1.2);
-  }
-
-  &:active {
-    transform: scale(0.9);
-  }
-}
-
-// goes from 1 to 5.
-@for $n from 1 through $nb-slides {
-  // arranges the navigation dots horizontally
-  .nav-dot[for=slide#{$n}] {
-    left: 50% + ((($n - 1) - (($nb-slides - 1)/ 2)) * 5%);
-  }
-
-  #slide#{$n}:checked {
-    // moves the carousel to the right slide
-    & ~ .carousel ul { left: -100% * ($n - 1) }
-
-    // highlights the selected navigation dot
-    & ~ .nav-dot[for=slide#{$n}] {
-      opacity: 1;
-    }
-  }
-}
-
-
-// ARROWS
-%arrow {
-  $arrow-size: 50px;
-  display: none;  // hidden by default
-  position: absolute;
-
-  cursor: pointer;
-  font-weight: bolder;
-  text-shadow: 0 0 7.5px rgba($color: black, $alpha: .7);
-
-  top: 50%;
-  z-index: 1;
-  opacity: .7;
-  margin-top: -$arrow-size / 2;
-  height: $arrow-size;
-  font-size: $arrow-size;
-  transition: .2s;
-
-  &:hover {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-
-  &:active {
-    transform: scale(0.9);
-  }
-}
-
-.left-arrow {
-  @extend %arrow;
-  left: 15px;
-}
-
-.right-arrow {
-  @extend %arrow;
-  right: 15px;
-}
-
-@function custom-modulo($n) {
-  // this function returns '$n % $nb-slides', except that if the result is 0,
-  // '$nb-slides' is returned.
-  // for exemple, for $nb-slides = 4, possible values are {1, 2, 3, 4}
-  // (and not {0, 1, 2, 3}).
-  @return 1 + ($nb-slides + (($n - 1) % $nb-slides)) % $nb-slides;
-}
-
-@for $n from 1 through $nb-slides {
-  // when the nth slide is selected,
-  // displays the left-arrow that goes to the (n-1)th slide
-  // and the right arrow that goes to the (n+1)th slide.
-  // don't worry, it loops thanks to the 'custom-modulo' function !
-
-  #slide#{$n}:checked {
-    & ~ .left-arrow[for=slide#{custom-modulo($n - 1)}],
-    & ~ .right-arrow[for=slide#{custom-modulo($n + 1)}] {
-      display: block;
-    }
-  }
-}
-
-.left-arrow, .right-arrow {
-  display: block !important;
-}
-
-.signature {
-  margin-top: 100px;
-  bottom: 0;
-  font-family: "Quicksand";
-  color: rgba(150, 150, 170);
-  text-shadow: 0 2.5px rgba(0, 0, 0, 0.25);
-
-  .name {
-    color: white;
-  }
-
-  .dot {
-    margin: 0 5px;
-  }
-
-  a {
-    color: white;
-    text-decoration: underline;
-  }
-}
-
+	.slider .arrows .arrow-prev .fas,
+	.slider .arrows .arrow-next .fas {
+		color: #4b4b4b;
+		opacity: 0.5;
+	}
 </style>
+<script>
+	const indicators = document.querySelectorAll(
+		'.slider .indicators .indicator'
+	);
+	const arrowPrev = document.querySelector('.slider .arrows .arrow-prev');
+	const arrowNext = document.querySelector('.slider .arrows .arrow-next');
+
+	const handleIndicatorClick = (event) => {
+		const indicator = event.target;
+		if (!isActive(indicator)) {
+			removeActive();
+			addActive(indicator);
+			showSlide(indicator.dataset.slide);
+		}
+	};
+
+	const handlePrevArrowClick = (event) => {
+		let activeSlide = 0;
+		let newActiveSlide = indicators.length;
+		let ready = false;
+
+		indicators.forEach((indicator) => {
+			if (isActive(indicator) && !ready) {
+				activeSlide = indicator.dataset.slide;
+				if (activeSlide !== '1') {
+					newActiveSlide = parseInt(activeSlide) - 1;
+				}
+				removeActive();
+				addActive(
+					document.querySelector(
+						`.slider .indicators [data-slide='${newActiveSlide}']`
+					)
+				);
+				showSlide(newActiveSlide);
+				ready = true;
+			}
+		});
+	};
+
+	const handleNextArrowClick = (event) => {
+		let activeSlide = 0;
+		let newActiveSlide = 1;
+		let ready = false;
+
+		indicators.forEach((indicator) => {
+			if (isActive(indicator) && !ready) {
+				activeSlide = indicator.dataset.slide;
+				if (activeSlide !== indicators.length.toString()) {
+					newActiveSlide = parseInt(activeSlide) + 1;
+				}
+				removeActive();
+				addActive(
+					document.querySelector(
+						`.slider .indicators [data-slide='${newActiveSlide}']`
+					)
+				);
+				showSlide(newActiveSlide);
+				ready = true;
+			}
+		});
+	};
+
+	indicators.forEach((indicator) => {
+		indicator.addEventListener('click', handleIndicatorClick);
+	});
+
+	arrowPrev.addEventListener('click', handlePrevArrowClick);
+	arrowNext.addEventListener('click', handleNextArrowClick);
+
+	function isActive(indicator) {
+		return indicator.hasAttribute('active');
+	}
+
+	function removeActive() {
+		document
+			.querySelectorAll('.slider .indicators [active]')
+			.forEach((item) => {
+				item.removeAttribute('active');
+			});
+	}
+
+	function addActive(indicator) {
+		indicator.setAttribute('active', '');
+	}
+
+	function showSlide(newActiveSlide) {
+		const newPosition = (100 * (newActiveSlide - 1)).toString();
+		document.querySelector(
+			'.slider-inner'
+		).style.marginLeft = `-${newPosition}%`;
+	}
+</script>

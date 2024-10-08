@@ -15,7 +15,7 @@ import Title from '../components/atoms/Title.astro';
 		<span id="closeModalBtn4" class="close">&times;</span>
 
 		<!-- Your about section -->
-    <!-- <slot /> -->
+		<!-- <slot /> -->
 		<section id="about" class="about">
 			<div class="about__container">
 				<div class="about__content">
@@ -52,101 +52,77 @@ import Title from '../components/atoms/Title.astro';
 	});
 </script>
 
-
 <style>
-  .about {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-	width: 100%;
-}
+	.about {
+		margin: 0 auto;
+	}
 
-.about__container {
-	display: flex;
-	padding: 11rem 13.1rem;
-	/* flex-wrap: wrap; */
-	justify-content: space-around;
-	gap: 4.4rem;
-}
-
-.about__img {
-	background-color: #0d0045;
-	-webkit-mask-image: radial-gradient(ellipse, #000 53%, #0000 68%);
-	border-radius: 50%;
-	mask-image: radial-gradient(ellipse, #000 53%, #0000 68%);
-	border-radius: 50%;
-	object-fit: cover;
-	width: 39.5rem;
-	height: 48.1rem;
-	min-width: 39.5rem;
-	min-height: 48.1rem;
-}
-
-.about__content {
-	display: flex;
-	flex-direction: column;
-	max-width: 75rem;
-	gap: 2.1rem;
-	justify-content: center;
-}
-
-.about__text {
-	font-size: 2.1rem;
-	max-width: 70.19rem;
-}
-
-@media screen and (max-width: 768px) {
 	.about__container {
-		padding: 8rem 3.1rem;
-		flex-direction: column-reverse;
-		align-items: center;
+
 	}
-	.about__img {
-		width: 29.5rem;
-		height: 38.1rem;
-		min-width: 29.5rem;
-		min-height: 38.1rem;
+	.about__content {
+		display: flex;
+		flex-direction: column;
+		max-width: 75rem;
+		gap: 2.1rem;
+		justify-content: center;
+		margin: 0 auto;
 	}
-}
 
+	.about__text {
+		font-size: 2.1rem;
+		max-width: 70.19rem;
+	}
 
-/* Modal container */
-.modal {
-	display: none; /* Hidden by default */
-	position: fixed;
-	z-index: 50;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
-}
+	@media screen and (max-width: 768px) {
+		.about__container {
+			padding: 8rem 3.1rem;
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+		
+	}
 
-/* Modal content */
-.modal-content {
-	background-color: rgba(0, 0, 0, 0.7);
-	margin: 10% auto; /* 10% from the top and centered */
-	padding: 20px;
-	border: 1px solid #88888819;
-	width: 100%; /* Could be adjusted for larger modals */
-	max-width: 1200px; /* Max width for the modal */
-}
+	/* Modal container */
+	.modal {
+		display: none; /* Hidden by default */
+		position: fixed;
+		z-index: 50;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(
+			0,
+			0,
+			0,
+			0.7
+		); /* Black background with transparency */
+	}
 
-/* Close button */
-.close {
-	color: #aaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-}
+	/* Modal content */
+	.modal-content {
+		background-color: rgba(0, 0, 0, 0.7);
+		margin: 10% auto; /* 10% from the top and centered */
+		padding: 20px;
+		border: 1px solid #88888819;
+		width: 100%; /* Could be adjusted for larger modals */
+		max-width: 1200px; /* Max width for the modal */
+	}
 
-.close:hover,
-.close:focus {
-	color: #000;
-	text-decoration: none;
-	cursor: pointer;
-}
+	/* Close button */
+	.close {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
 
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
 </style>
