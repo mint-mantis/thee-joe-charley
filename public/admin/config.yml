@@ -1,8 +1,9 @@
 backend:
-  name: github # or gitlab, bitbucket
-  repo: yourusername/yourrepo
+  name: git-gateway # or gitlab, bitbucket
+  repo: 
   branch: main # or your default branch
-  auth_endpoint: https://thejoecharley.com
+local_backend: true
+site_url: https://thejoecharley.com
 
 media_folder: "public/uploads" # Where images are stored
 public_folder: "/uploads"
