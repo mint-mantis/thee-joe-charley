@@ -1,10 +1,7 @@
 ---
-import { getCollection } from 'astro:content';
 import Button from '../components/UI/button-outline.astro';
 import SocialIcons from '../components/SocialIcons.astro';
 import Title from '../components/atoms/Title.astro';
-
-const events = await getCollection('events');
 ---
 
 <!-- Trigger button to open modal -->
@@ -24,21 +21,33 @@ const events = await getCollection('events');
 					<div class="text-center">
 						<Title margin="1rem" contenido="Events Lists" />
 					</div>
-					{events.map(event => ( 
 					<div class="event">
-						<h3 class="font-bold text-4xl underline mb-4">{event.data.title}</h3>
+						<h3 class="font-bold text-4xl underline mb-4">Romeo & Juliet // Beauty & The Beast</h3>
 						<ul>
-							<li>Date: {event.data.date}</li>
-							<li>Time: {event.data.time}</li>
-							<li>Location: {event.data.location}</li>
+							<li>Date: Thu Feb 6 - Sun Feb 16, 2025</li>
+							<li>Time: Various</li>
+							<li>Location: The Southern Theater</li>
 						</ul>
 						<div class="mt-8">
-							<Button buttonText="Buy Ticket" buttonLink={event.data.ticket_link}/>
+							<Button buttonText="Buy Ticket" buttonLink="https://www.novelmpls.com/"/>
 						</div>
-						
 					</div>
-					<hr/>
-					))}
+					<hr>
+					<div class="event">
+						<h3 class="font-bold text-4xl underline mb-4">
+							The Good Morning Experience: BLACK AWAKENING
+						</h3>
+						<ul>
+							<li>Date: Tue Feb 11, 2025</li>
+							<li>Time: 7:00pm</li>
+							<li>Location: The Southern Theater<br>
+							</li>
+						</ul>
+						<div class="mt-8">
+							<Button buttonText="Buy Ticket" buttonLink="https://www.eventbrite.com/e/the-good-morning-experience-black-awakening-tickets-1225657066279?aff=oddtdtcreator"/>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</section>
