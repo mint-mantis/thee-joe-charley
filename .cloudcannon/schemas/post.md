@@ -1,6 +1,7 @@
 ---
 title:
-excerpt:
-author:
-image: /images/header.png
+date: 
+time: 
+location: 
+ticket_link: 
 ---
