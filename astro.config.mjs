@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import bookshop from '@bookshop/astro-bookshop';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
@@ -9,5 +10,9 @@ export default defineConfig({
   devToolbar: {
     enabled: false
   },
-  integrations: [react(), tailwind(), sitemap()]
+  integrations: [
+    bookshop(),
+    react(), 
+    tailwind(), 
+    sitemap()]
 });

@@ -7,11 +7,49 @@ collections_config:
   events:
     path: src/content/events
     name: Events
-    icon: event
+    output: true
     disable_url: false
+    icon: notes
+    documentation:
+    preview:
+    sort:
+    sort_options:
+    singular_name:
+    singular_key:
+    _editables:
+    _inputs:
+    _select_data:
+    _structures:
+    add_options:
+    create:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+    new_preview_url:
+    schemas:
+      default:
+        path: .cloudcannon/schemas/post.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name:
+        icon: notes
+        preview:
+        _editables:
+        _inputs:
+        _select_data:
+        _structures:
+        create:
+        new_preview_url:
+    schema_key:
+editor:
+  default_path:
+timezone: Etc/UTC
+markdown:
+  engine:
+  options:
+encoding: utf-8
 timezone: America/Edmonton
 markdown:
   engine: commonmark
