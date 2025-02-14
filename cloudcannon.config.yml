@@ -10,6 +10,7 @@ collections_config:
     output: true
     disable_url: false
     icon: notes
+    filter:
     documentation:
     preview:
     sort:
